@@ -59,6 +59,14 @@ Make sure to add this to `$PATH` (or `$env.PATH` in `nu` shell).
 For more details see [the `nur` installation docs](https://nur-taskrunner.github.io/docs/installation.html).
 This also includes MacOS (using homebrew) and Windows (using `.msi` installer) installation methods.
 
+### Nix
+
+This repository provides a flake, so if you use Nix you can run `nur` directly with
+`nix run github:nur-taskrunner/nur`, install the package with `nix profile install
+github:nur-taskrunner/nur`, or add it as a flake input in your own configuration. A `nix build`
+in a checkout builds the `nur` binary, and `nix develop` drops you into a dev shell with the
+build's dependencies available.
+
 ## Working with `nur`
 
 `nur` uses a file called `nurfile` to define your tasks. This file is a normal `nu` script and may
